@@ -1,1 +1,2 @@
-puts "Benito" + " Santos"
+name = gets.chomp
+puts "Hello " + name + "!"
