@@ -1,3 +1,4 @@
+# Given
 
 family = {  uncles: ["bob", "joe", "steve"],
             sisters: ["jane", "jill", "beth"],
@@ -5,10 +6,6 @@ family = {  uncles: ["bob", "joe", "steve"],
             aunts: ["mary","sally","susan"]
           }
           
-immediate_family = family.select{|k,v| k == sisters || brothers}
-
-p immediate_family
-
-#h = { "a" => 100, "b" => 200, "c" => 300 }
-#h.select {|k,v| k > "a"}  #=> {"b" => 200, "c" => 300}
-#h.select {|k,v| v < 200}  #=> {"a" => 100}
+immediate_family = family.select{|k,v| (k == :sisters) || (k == :brothers)}
+puts immediate_family
+puts immediate_family.values.flatten
